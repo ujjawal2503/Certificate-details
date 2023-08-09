@@ -11,4 +11,8 @@ public interface CertificateService {
     List<CertificateDetail> getAllCertificate();
 
     CertificateDetail updateCertificate(String certName,String assigneeName);
+
+    List<CertificateDetail> getAllCertificateForNextThirtyDays();
+
+    List<CertificateDetail> getAllCertificateForNextSixtyDays();
 }

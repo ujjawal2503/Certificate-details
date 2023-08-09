@@ -36,5 +36,17 @@ public class CertificateController {
         return ResponseEntity.status(HttpStatus.OK).body(certificate);
 
 }
+    @GetMapping(value = "/thirtyDays")
+    ResponseEntity<List<CertificateDetail>> getAllCertificateForThirtyDays(){
+        List<CertificateDetail> contact = certificateService.getAllCertificateForNextThirtyDays();
+        return ResponseEntity.status(HttpStatus.OK).body(contact);
+    }
+
+    @GetMapping(value = "/sixtyDays")
+    ResponseEntity<List<CertificateDetail>> getAllCertificateForSixtyDays(){
+        List<CertificateDetail> contact = certificateService.getAllCertificateForNextSixtyDays();
+        return ResponseEntity.status(HttpStatus.OK).body(contact);
+    }
+
 
 }
